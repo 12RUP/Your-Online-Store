@@ -1,0 +1,233 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .cart-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .filters {
+    background-color: #eee;
+    padding: 1em;
+    width: 200px; /* Adjust the width as needed */
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-grow: 1;
+  }
+  
+  .filters label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 5px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .product:hover {
+    transform: scale(1.05);
+  }
+  
+  .product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .product button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .product button:hover {
+    background-color: #0056b3;
+  }
+  
+  .cart {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    width: 400px; /* Увеличиваем ширину модального окна */
+  }
+  
+  #cart-items-modal img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+  }
+  
+  #cart-items-modal li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .delete-item {
+    margin-left: auto;
+    cursor: pointer;
+    color: #ff0000;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  main {
+    margin-bottom: 50px; /* Подставьте нужное значение, равное высоте вашего footer */
+  }
+  
+  /* Переместите footer вниз экрана и увеличьте его высоту */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10px; /* Подставьте нужное значение */
+  }
+  .search-bar {
+  position: relative; /* Добавляем относительное позиционирование к родительскому контейнеру */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+  }
+  
+  #searchInput {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+ /* Добавьте или обновите эти стили в ваш CSS файл */
+
+/* Добавьте или обновите эти стили в ваш CSS файл */
+
+/* Добавьте или обновите эти стили в ваш CSS файл */
+
+#suggestions-container {
+    display: none;
+    position: absolute;
+    width: calc(100% - 20px); /* Чтобы контейнер был по ширине равен полю ввода с учетом отступов */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    top: calc(100% + 8px); /* Добавляем отступ от поля ввода */
+    left: 10px; /* Отступ от левого края */
+    border-radius: 5px;
+    color: grey;
+  }
+  
+  #searchInput:focus + #suggestions-container {
+    display: block;
+  }
+  
+  #suggestions-container div {
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  #suggestions-container div:hover {
+    background-color: #525252;
+  }
+  h1 a {
+    text-decoration: none; /* Убираем стандартное подчеркивание */
+    color: #fff; /* Цвет текста */
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s; /* Плавное изменение цвета при наведении */
+  }
+  
+  h1 a:hover {
+    color: #ffd700; /* Изменяем цвет текста при наведении */
+  }
+
